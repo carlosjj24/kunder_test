@@ -1,0 +1,150 @@
+.phoneBanner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: var(--title-font);
+    color: var(--dark-color);
+    overflow: visible;
+}
+.phoneInformation{
+    padding-left: 200px;
+    width: 100%;
+}
+.productName{
+    font-size: 40px;
+}
+.productDescription{
+    font-size: 20px;
+    width: 85%;
+    line-height: 1.3em;
+    max-height: 5.1em; /* four lines*/
+    overflow: hidden;
+}
+.cellphoneImgContainer{
+    position: relative;
+}
+.cellphoneImg{
+    height: 350px;
+    width: auto;
+    position: relative;
+    filter: drop-shadow(5px 5px 10px #22222298);
+    -webkit-filter: drop-shadow(5px 5px 5px #22222280);
+    z-index: 2;
+    overflow: visible;
+}
+/*phone image decoration*/
+.bigCircle{
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    bottom: 45px;
+    right: -100px;
+    border-radius: 50%;
+    border: 1px dashed var(--dark-color);
+}
+.smallCircle, .smallCircleBorder{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    bottom: 180px;
+    width: 30px;
+    height: 30px;
+}
+.smallCircle{
+    background-color: var(--main-color);
+    right: -100px;
+    z-index: 0;
+}
+.smallCircleBorder{
+    right: -105px;
+    border: 1px solid var(--dark-color);
+    background-color: #00000000;
+    z-index: 1;
+}
+
+@media (max-width: 700px) {
+    .phoneBanner{
+        margin-left: 2.85vw;
+        margin-right: 2.85vw;
+    }
+    .phoneInformation{
+        padding-left: 28.57vw;
+    }
+    .productName{
+        font-size: 5.71vw;
+    }
+    .productDescription{
+        font-size: 2.85vw;
+    }
+    .cellphoneImg{
+        height: 50vw;
+    }
+    /*phone image decoration*/
+    .bigCircle{
+        width: 28.57vw;
+        height: 28.57vw;
+        bottom: 6.42vw;
+        right: -14.28vw;
+    }
+    .smallCircle, .smallCircleBorder{
+        bottom: 25.71vw;
+        width: 4.28vw;
+        height: 4.28vw;
+    }
+    .smallCircle{
+        right: -14.28vw;
+    }
+    .smallCircleBorder{
+        right: -15vw;
+    }
+}
+@media (max-width: 500px) {
+    .phoneBanner{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 500px;
+    }
+    .phoneInformation{
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+    .cellphoneImgContainer{
+        margin-left: 30px;
+    }
+    .productName{
+        font-size: 28px;
+    }
+    .productDescription{
+        font-size: 14px;
+        width: 100%;
+        max-height: 3.9em;
+    }
+    .cellphoneImg{
+        height: 249px;
+    }
+    /*phone image decoration*/
+    .bigCircle{
+        width: 144px;
+        height: 144px;
+        bottom: 32px;
+        right: -71px;
+    }
+    .smallCircle, .smallCircleBorder{
+        bottom: 128px;
+        width: 21px;
+        height: 21px;
+    }
+    .smallCircle{
+        right: -71px;
+    }
+    .smallCircleBorder{
+        right: -75px;
+    }
+}
