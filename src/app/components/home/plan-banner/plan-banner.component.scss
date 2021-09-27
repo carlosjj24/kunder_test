@@ -1,0 +1,84 @@
+.planBannerBackground{
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    top: -10px;
+    left: -10px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: absolute;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    z-index: -1;
+
+    &:after{
+        content: " ";
+        position: absolute;
+        background-color: #ffffff5b;
+        background: linear-gradient(#ffffff 5%, #ffffff28);
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.planBannerContent{
+    max-width: 900px;
+    width: 100%;
+}
+.planBannerDescription{
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 50px;
+    line-height: 1.3em;
+    letter-spacing: 1.8px;
+    max-height: 5.1em; /* four lines */
+    font-size: 40px;
+    font-family: var(--title-font);
+    color: var(--dark-color);
+}
+.planBannerButton{
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 23px;
+    border: none;
+    margin: auto;
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    font-family: var(--text-font);
+    background-color: var(--main-color-darker);
+    transition: background-color 0.4s;
+
+    &:hover{
+        background-color: var(--main-color-darker-hover);
+    }
+}
+
+@media (max-width: 900px) {
+    .planBannerDescription{
+        font-size: 4.44vw;
+    }
+    .planBannerContent{
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .planBannerDescription{
+        font-size: 22px;
+        max-height: 6.5em; /* five lines */
+        text-align: left;
+    }
+    .planBannerContent{
+        width: 90%;
+    }
+    .planBannerButton{
+        font-size: 20px;
+        margin-left: 0;
+    }
+}

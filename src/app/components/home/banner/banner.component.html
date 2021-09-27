@@ -1,0 +1,15 @@
+<div class="bannerContainer" *ngIf="show">
+    <app-plan-banner 
+        [backgroundImg]="data.backgroundImg"
+        [productDescription]="data.productDescription"
+        [buttonText]="data.buttonText"
+        [link]="data.link"
+        *ngIf="showBanner('plan')"
+    ></app-plan-banner>
+    <app-cellphone-banner 
+        [productName]="data.productName"
+        [productDescription]="data.productDescription"
+        [productImg]="data.productImg"
+        *ngIf="showBanner('cellphone')"
+    ></app-cellphone-banner>
+</div>
